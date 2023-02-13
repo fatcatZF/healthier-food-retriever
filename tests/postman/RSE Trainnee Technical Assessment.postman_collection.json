@@ -1,0 +1,103 @@
+{
+	"info": {
+		"_postman_id": "fc9e76fe-a864-497c-af54-19633d3c563d",
+		"name": "RSE Trainnee Technical Assessment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Recommend Alteranative Food Item",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_uri}}/recommend-alternative-food-item?food_item_uri=http://www.foodvoc.org/resource/nevo%23foodItem383",
+					"host": [
+						"{{base_uri}}"
+					],
+					"path": [
+						"recommend-alternative-food-item"
+					],
+					"query": [
+						{
+							"key": "food_item_uri",
+							"value": "http://www.foodvoc.org/resource/nevo#foodItem383"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Food Items",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_uri}}/food-items",
+					"host": [
+						"{{base_uri}}"
+					],
+					"path": [
+						"food-items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Food Item Uris",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_uri}}/food-item-uris?start_index=0&end_index=10000",
+					"host": [
+						"{{base_uri}}"
+					],
+					"path": [
+						"food-item-uris"
+					],
+					"query": [
+						{
+							"key": "start_index",
+							"value": "0"
+						},
+						{
+							"key": "end_index",
+							"value": "10000"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_uri",
+			"value": "localhost:5000",
+			"type": "default"
+		}
+	]
+}
