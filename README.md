@@ -7,4 +7,9 @@ This flask web application implements food retrieval and healthier alternative r
 
 
 ## API endpoints 
-
+<ul>
+  <li>browse available food items: /food-items</li>  
+  <li>check detail of a specific food item: /detail/food-items?food_item_uri=...</li>
+  <li>search relevant food items given input text: /search?search_text=...</li>
+  <li>recommend healthier similar food items: /recommend-alternative-food-items?food_item_uri=...</li>
+</ul>
