@@ -17,7 +17,7 @@ def home_page():
              <html>
                 <h1>Healthier Food Retriever</h1>
                 <p>
-                Available APIs
+                Available API endpoints
                 <ul>
                   <li>browse available food items: /food-items</li>
                   <li>browse available food item uris: /food-item-uris</li>
