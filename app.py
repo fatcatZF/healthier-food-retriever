@@ -42,9 +42,9 @@ def recommend_alternative_food_item():
         raise HTTPException('Invalid food item uri.')
     food_item: FoodItem = food_item_service.get_food_item(
         food_item_uri=food_item_uri)
-    alternative_food_item = recommender_service.recommend_alternative_food_item(
+    alternative_food_items = recommender_service.recommend_alternative_food_item(
         food_item=food_item)
-    return jsonify(alternative_food_item.serialize())
+    return jsonify([food.serialize() for food in alternative_food_items])
 
 
 @app.route("/food-items")
